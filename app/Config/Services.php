@@ -28,35 +28,34 @@ class Services extends CoreServices
 	//        return new \CodeIgniter\Example();
 	//    }
 
-	   public static function virtualcard($getShared = true)
+	   public static function card($getShared = true)
 	   {
 	       if ($getShared)
 	       {
-	           return static::getSharedInstance('virtualcard');
+	           return static::getSharedInstance('card');
 	       }
 	
-	       return new \Flutterwave\VirtualCard();
+	       return new \Flutterwave\Card();
 	   }
 
-
-	   public static function transfer($getShared = true)
+	   public static function twillo($getShared = true)
 	   {
 	       if ($getShared)
 	       {
-	           return static::getSharedInstance('transfer');
+	           return static::getSharedInstance('twillo');
 	       }
 	
-	       return new \Flutterwave\Transfer();
+	       return new \Twilio\Rest\Client();
 	   }
 
-
-	   public static function bill($getShared = true)
-	   {
-	       if ($getShared)
-	       {
-	           return static::getSharedInstance('bill');
-	       }
+	//    public static function qrcode($getShared = true)
+	//    {
+	//        if ($getShared)
+	//        {
+	//            return static::getSharedInstance('qrcode');
+	//        }
 	
-	       return new \Flutterwave\Bill();
-	   }
+	//        return new \Endroid\QrCode\QrCode();
+	//    }
+
 }

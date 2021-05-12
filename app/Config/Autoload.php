@@ -40,9 +40,12 @@ class Autoload extends AutoloadConfig
 	 * @var array
 	 */
 	public $psr4 = [
-		APP_NAMESPACE => APPPATH, // For custom app namespace
-		'Config'      => APPPATH . 'Config',
-		'Flutterwave' => ROOTPATH . 'flutterwave/library',
+		APP_NAMESPACE 		=> APPPATH, // For custom app namespace
+		'Config'      		=> APPPATH .  'Config',
+		'Flutterwave' 		=> ROOTPATH . 'flutterwave/library',
+		'Myth\Auth'	  		=> APPPATH .  'ThirdParty/myth-auth/src',
+		'Twillo'			=> APPPATH .  'ThirdParty/Twilio',
+		'Endroid'  			=> APPPATH .  'ThirdParty/endroid/src',
 	];
 
 	/**
